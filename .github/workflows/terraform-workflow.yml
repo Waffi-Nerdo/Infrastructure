@@ -19,6 +19,7 @@ jobs:
           path: Terraform
 
       - name: Terraform Plan
+        uses: dflook/terraform-plan@v1
         id: plan
         with:
           path: Terraform
