@@ -1,7 +1,9 @@
+name: terraform
+
 on: 
-  pull-request:
-   branch:
-    main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   validate:
