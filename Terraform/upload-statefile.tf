@@ -2,7 +2,7 @@
 terraform {
   backend "s3" {
     bucket = "my-infrastructure-ifeoluwa"
-    key    = "statefile/${var.env}.tfstate"
+    key    = "statefile/dev.tfstate"
     region = "us-east-1"
     #assume_role_policy_arns = []
   }
