@@ -1,27 +1,27 @@
-name: terraform
+# name: terraform
 
-on: 
-  pull_request:
-    branches:
-      - main
+# on: 
+#   pull_request:
+#     branches:
+#       - main
 
-jobs:
-  validate:
-    runs-on: ubuntu-latest
-    name: Validate terraform
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+# jobs:
+#   validate:
+#     runs-on: ubuntu-latest
+#     name: Validate terraform
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v2
 
-      - name: terraform validate
-        uses: dflook/terraform-validate@v1
-        with:
-          path: Terraform
+#       - name: terraform validate
+#         uses: dflook/terraform-validate@v1
+#         with:
+#           path: Terraform
 
-      - name: Terraform Plan
-        uses: dflook/terraform-plan@v1
-        id: plan
-        with:
-          path: Terraform
-        if: github.event_name == 'pull_request'
+#       - name: Terraform Plan
+#         uses: dflook/terraform-plan@v1
+#         id: plan
+#         with:
+#           path: Terraform
+#         if: github.event_name == 'pull_request'
         
